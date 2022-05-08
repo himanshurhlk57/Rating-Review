@@ -1,0 +1,20 @@
+// creating a new user
+// url should be a noun not a verb
+
+// 1 - Signup
+// POST /api/users
+// body 
+// {
+//   email,
+//   password
+// }
+
+// 2 - Login 
+// when a user login they are basically creating a session 
+// for them 
+// POST /api/sessions
+// body
+// {
+//   email,
+//   password
+// }

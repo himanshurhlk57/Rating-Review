@@ -1,14 +1,15 @@
 const express = require("express");
 const app = express();
+const userRoutes = require("./routes/usersRoutes");
+const sessionRoutes = require("./routes/sessionsRoutes");
 
 require("dotenv").config();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Hello world bolte");
-});
+app.use("/api/users", userRoutes);
+app.use("/api/sessions", sessionRoutes);
 
 const port = process.env.PORT;
 
