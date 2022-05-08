@@ -2,8 +2,11 @@ const express = require("express");
 const app = express();
 const userRoutes = require("./routes/usersRoutes");
 const sessionRoutes = require("./routes/sessionsRoutes");
+const connectDB = require("./config/db");
 
 require("dotenv").config();
+
+connectDB();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
