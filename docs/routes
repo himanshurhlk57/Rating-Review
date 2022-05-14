@@ -1,0 +1,31 @@
+// creating a new user
+// url should be a noun not a verb
+
+// 1 - Signup
+// POST /api/users
+// body 
+// {
+//   email,
+//   password
+// }
+
+// 2 - Login 
+// when a user login they are basically creating a session 
+// for them 
+// POST /api/sessions
+// body
+// {
+//   email,
+//   password
+// }
+
+// session and cookie are different in the places that their 
+// data is stored
+// A cookie has it data stored in the browser, 
+// and that browser is going to attach that cookie key-value 
+// pair to every http request that it does 
+
+// Session on the other hand is going to stored on the 
+// server side 
+// Session data is not saved in the cookie itself, just the session ID. 
+// Session data is stored server-side.

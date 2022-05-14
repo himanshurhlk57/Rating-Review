@@ -1,0 +1,13 @@
+// Authentication (express-session)
+
+when a user correctly sends their email and password then the server then respond with a randomly generated string i.e a token and sends back to the client where it is stored in the client browser in a cookie.
+Once the user browser store the token for that particular domain in the cookie. And if the next time if a request is sent the token is sent with the request to the server. 
+
+Initially the token is sent from the server to the client. The client stores it and every subsequence request that the client make it will send the token back to the serve. And now the server verifies with who does this token maps to.
+
+
+express-session
+In the express session based authentication session data is not saved in the cookie itself, just the session id is stored in the cookie.
+Session data is stored server-side.
+
+For storing the session data the default memory-store is memoryStore i.e not suitable for production so we will be using mongoStore and store the session data in our mongoDB.

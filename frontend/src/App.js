@@ -1,8 +1,16 @@
+import Body from "./components/Body/Body";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Heloo</h1>
-    </div>
+    <>
+      <Header />
+      <div className="App">
+        <Body />
+        <Footer />
+      </div>
+    </>
   );
 }
 
