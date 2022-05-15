@@ -7,18 +7,30 @@ import twitterIcon from "./img/twitter-brands.svg";
 function Footer() {
   return (
     <div>
-      <footer class="footer">
+      <footer className="footer">
         <hr style={{ marginBottom: "7px" }} />
         <h2>Made with 💗 by Himanshu</h2>
-        <div class="icons">
-          <a href="" target="_blank">
-            <img class="icon" src={githubIcon} alt="githubIcon" />
+        <div className="icons">
+          <a
+            href="https://github.com/himanshurhlk57"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img className="icon" src={githubIcon} alt="githubIcon" />
           </a>
-          <a href="#" target="_blank">
-            <img class="icon" src={linkedinIcon} alt="linkedinIcon" />
+          <a
+            href="https://www.linkedin.com/in/himanshu-kumar-018424178/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img className="icon" src={linkedinIcon} alt="linkedinIcon" />
           </a>
-          <a href="#" target="_blank">
-            <img class="icon" src={twitterIcon} alt="twitterIcon" />
+          <a
+            href="https://twitter.com/himanshurhlk57"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img className="icon" src={twitterIcon} alt="twitterIcon" />
           </a>
         </div>
       </footer>

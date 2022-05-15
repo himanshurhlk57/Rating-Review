@@ -2,14 +2,18 @@ import React from "react";
 import img from "./domenico-loia-EhTcC9sYXsw-unsplash.jpg";
 import "./card.css";
 
-function Card() {
+function Card({ movie }) {
   return (
     <div className="cardWrapper">
-      <img className="cardImg" src={img} alt="" />
-      <h2 className="movieDetail title">Title: Legacies</h2>
-      <h2 className="movieDetail">Rating: 8.0🌟</h2>
-      <h2 className="movieDetail">Rate Count 1897</h2>
-      <h2 className="movieDetail">Release Date: 2018-10-25</h2>
+      <img
+        className="cardImg"
+        src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+        alt=""
+      />
+      <h2 className="movieDetail title">{movie.title}</h2>
+      <h2 className="movieDetail">Rating : {movie.vote_average}🌟</h2>
+      <h2 className="movieDetail">Rate Count : {movie.vote_count}</h2>
+      <h2 className="movieDetail">Release Date : {movie.release_date}</h2>
     </div>
   );
 }

@@ -4,7 +4,7 @@
   justify-content: space-around;
   align-items: center;
   cursor: pointer;
-  background-color: #39445a;
+  background-color: #222831;
   color: white;
   padding: 10px;
   font-size: 25px;
@@ -15,16 +15,16 @@
 .headerSearch{
   background: #b7becc;
   height: 50px;
-  width: 250px;
+  width: 380px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 14px;
+  border-radius: 8px;
 }
 .inputField{
   outline: none;
-  width: 200px;
-  border-radius: 14px;
+  width: 330px;
+  border-radius: 8px;
   height: 40px;
   border: none;
   padding: 6px 12px;
