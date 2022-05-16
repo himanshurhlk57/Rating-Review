@@ -1,0 +1,21 @@
+.paginationWrapper{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spanStyle{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: #222831;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 10px;
+
+}
+.pageNo{
+  font-size: 18px;
+}

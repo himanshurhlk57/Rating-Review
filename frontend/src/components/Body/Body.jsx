@@ -1,31 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import Card from "./Card";
 import "./body.css";
-
-const API_TRENDING =
-  "https://api.themoviedb.org/3/movie/top_rated?api_key=7ca4a52d69bb502d564f07dcfac83f2c&language=en-US&page=1";
+import Pagination from "../Pagination/Pagination";
+import MovieContext from "../../context/MovieContext";
 
 function Body() {
-  const [movies, setMovie] = useState([]);
-
-  useEffect(() => {
-    async function fetchApi() {
-      const response = await fetch(API_TRENDING);
-      const data = await response.json();
-      setMovie(data.results);
-    }
-    fetchApi();
-  }, []);
-
-  console.log(movies);
+  const { movies, page, setPage } = useContext(MovieContext);
 
   return (
-    <div className="bodyWrapper">
-      {movies &&
-        movies.map((movie) => {
-          return <Card key={movie.id} movie={movie} />;
-        })}
-    </div>
+    <>
+      <div className="bodyWrapper">
+        {movies &&
+          movies.map((movie) => {
+            return <Card key={movie.id} movie={movie} />;
+          })}
+      </div>
+      <Pagination page={page} setPage={setPage} />
+    </>
   );
 }
 

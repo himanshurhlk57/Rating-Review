@@ -1,14 +1,18 @@
 .cardWrapper {
-  max-width: 250px;
+  width: 230px;
   border-radius: 2px;
   box-shadow: 0 1px 8px black;
-  width: 400px;
-  margin-left: 60px;
+  margin-left: 20px;
   text-align: center;
+  margin-right: 20px;
+  padding: 1px;
   padding-bottom: 10px;
+  background-color: #222831;
+  border-radius: 8px;
 }
 .cardImg {
-  width: 250px;
+  border-radius: 6px;
+  width: 230px;
 }
 .movieDetail{
   font-size: 15px;
