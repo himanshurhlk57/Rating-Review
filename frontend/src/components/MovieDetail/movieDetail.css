@@ -1,0 +1,108 @@
+body {
+  background-color: #30475e;
+  color: white;
+}
+.firstRowWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.movieIframeWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.movieImageBroad {
+  object-fit: contain;
+  border-radius: 9px;
+  margin-left: 50px;
+  width: 83%;
+  box-shadow: 0px 1px 2px black;
+}
+.innerTitle {
+  color: rgb(233, 232, 201);
+  margin-top: 10px;
+  font-size: 31px;
+}
+.innerDate {
+  color: antiquewhite;
+  margin-top: 5px;
+  font-size: 20px;
+}
+.innerText {
+  width: 92%;
+}
+.innerOverview {
+  margin-top: 30px;
+  font-size: 19px;
+}
+.movieDetailss {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.innerOverview {
+  margin-top: 40px;
+  width: 70%;
+}
+
+.movieDetailDetails {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.youtubeVideo {
+  margin-top: 80px;
+  width: 97%;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px black;
+}
+.castAndCrewText {
+  margin-left: 50px;
+  font-size: 30px;
+}
+.movieOverview {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.subMovieOverview {
+  margin-bottom: 50px;
+}
+.subMovieOverview h3 {
+  margin-top: 7px;
+  font-size: 19px;
+}
+textarea {
+  border-radius: 6px;
+  padding: 8px;
+  margin-top: 15px;
+  border: 2px solid #222831;
+  box-shadow: 0px 1px 2px #222831;
+}
+.reviewAndRating {
+  margin-bottom: 189px;
+  margin-left: 80px;
+}
+.rateThis {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.postButton {
+  margin-top: 3px;
+  background-color: yellow;
+  color: black;
+  width: 72px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 2;
+}
+.reviewAndRating h3 {
+  margin: 6px;
+}

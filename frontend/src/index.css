@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap");
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 
 * {
   padding: 0;
