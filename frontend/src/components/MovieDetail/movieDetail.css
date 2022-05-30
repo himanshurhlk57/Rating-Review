@@ -12,7 +12,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
 .movieImageBroad {
   object-fit: contain;
   border-radius: 9px;
@@ -66,10 +65,7 @@ body {
 .movieOverview {
   display: flex;
   align-items: center;
-  margin-top: 20px;
-}
-.subMovieOverview {
-  margin-bottom: 50px;
+  margin-top: 9px;
 }
 .subMovieOverview h3 {
   margin-top: 7px;
@@ -81,13 +77,14 @@ textarea {
   margin-top: 15px;
   border: 2px solid #222831;
   box-shadow: 0px 1px 2px #222831;
+  background-color: rgb(223, 223, 203)
 }
 .reviewAndRating {
-  margin-bottom: 189px;
+  margin-bottom: 172px;
   margin-left: 80px;
 }
 .rateThis {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 5px;
   font-size: 18px;
 }
@@ -95,14 +92,21 @@ textarea {
   margin-top: 3px;
   background-color: yellow;
   color: black;
-  width: 72px;
+  width: 75px;
   height: 32px;
   border: none;
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
   line-height: 2;
+  border-radius: 4px
 }
 .reviewAndRating h3 {
   margin: 6px;
+}
+.starSelectedWrapper{
+  display: flex;
+}
+.starSelection{
+  margin-left: 10px;
 }

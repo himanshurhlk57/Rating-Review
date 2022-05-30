@@ -1,3 +1,15 @@
-when a user correctly send for example a username or 
+when a user correctly send for example a username or
 password for the first time. The server then generates
 a random string said as token
+
+Sessions based authentication means that upon a successful login, a “session” entry containting the user data is created in the Database or an In-Memory Store like Redis on the Server, while a cookie with an expiry date, containing a sessionID to this session entry is sent to the client, this cookie is then automatically sent with each request, which is accepted by the server if it is not expired, and access is granted as a logged in user
+
+Now you have set the cookie so for every post or get request the cookie is also sent to the server
+
+Now the backend is receiving the cookie it can identify the user that made this request based on the cookie
+
+sessions has the information about the cookies
+
+userCredntials has emails and passwords
+
+users has informations about the users firstame lastname email whatever you want to store about the user

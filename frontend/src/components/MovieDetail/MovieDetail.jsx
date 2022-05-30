@@ -8,6 +8,27 @@ function MovieDetail() {
 
   const [movieDetails, setMovieDetails] = useState("");
   const [videoDetail, setVideoDetail] = useState("");
+  const [ratingReview, setRatingReview] = useState([
+    { id: 1, rating_review: "7⭐ good movie" },
+    { id: 2, rating_review: "8⭐ My favorite movie" },
+    { id: 3, rating_review: "9⭐ Must watch" },
+    { id: 5, rating_review: "10⭐ The best" },
+  ]);
+  const [star, setStar] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+  const [starValue, setStarValue] = useState(9);
+
+  const [review, setReview] = useState("");
+
+  const handleStar = (e) => {
+    setStarValue(star[e.target.value]);
+  };
+
+  const [index1, setIndex1] = useState(0);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
   const fetchMovieDetails = async () => {
     const response = await fetch(
@@ -66,13 +87,6 @@ function MovieDetail() {
             allowFullScreen="allowFullScreen"
             frameBorder="0"
           ></iframe>
-          {/* <a
-            rel="noreferrer"
-            target="_blank"
-            href={`https://www.youtube.com/watch?v=${videoDetail}`}
-          >
-            <button className="trailerButton">Watch on youtube</button>
-          </a> */}
         </div>
       </div>
 
@@ -89,20 +103,49 @@ function MovieDetail() {
             <h3>Average rating : {vote_average}/10⭐</h3>
             <h3>Vote Count : {vote_count}</h3>
             <h4 className="rateThis">Rate and review :</h4>
-            <h4 className="giveStar">Stars selected</h4>
-            <textarea name="" id="" cols="45" rows="6">
-              Write a review
-            </textarea>
-            <div>
-              <button className="postButton">POST</button>
-            </div>
+
+            <form onSubmit={handleSubmit}>
+              <div className="starSelectedWrapper">
+                <h4 className="giveStar">Star selected</h4>
+                <div className="starSelection">
+                  <label htmlFor="star">
+                    <select name="star" id="star" onChange={handleStar}>
+                      {star.map((st, key) => (
+                        <option selected={index1 === key} key={key} value={key}>
+                          {st}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <textarea
+                  name="review"
+                  id=""
+                  cols="45"
+                  rows="6"
+                  value={review}
+                  onChange={(e) => {
+                    setReview(e.target.value);
+                  }}
+                >
+                  Write a review
+                </textarea>
+              </div>
+              <div>
+                <button className="postButton">POST</button>
+              </div>
+            </form>
           </div>
           <div className="reviewAndRating">
             <h3>Audience reviews</h3>
-            <h3>7⭐ Good movie</h3>
-            <h3>8⭐ My favorite movie</h3>
-            <h3>9⭐ Must watch</h3>
-            <h3>10⭐ The best</h3>
+            {ratingReview.map((ratingReview) => {
+              return (
+                <h3 key={ratingReview.id}>{ratingReview.rating_review}</h3>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -116,3 +159,13 @@ function MovieDetail() {
 }
 
 export default MovieDetail;
+
+{
+  /* <a
+            rel="noreferrer"
+            target="_blank"
+            href={`https://www.youtube.com/watch?v=${videoDetail}`}
+          >
+            <button className="trailerButton">Watch on youtube</button>
+          </a> */
+}

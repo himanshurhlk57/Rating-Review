@@ -7,17 +7,31 @@
 // {
 //   email,
 //   password
-// }
+// } 
 
 // 2 - Login 
 // when a user login they are basically creating a session 
-// for them 
+// for themselves
 // POST /api/sessions
 // body
 // {
 //   email,
 //   password
 // }
+
+you will take the session object if fot the particular session 
+a user logged in you will set the userId
+
+now whenever we get a request and you identify that this is the 
+cookie id and this is the session we know which user the session belongs to 
+
+// 3 updating the information about the user 
+PUT /api/users/me
+
+{
+  firstName,
+  lastName
+}
 
 // session and cookie are different in the places that their 
 // data is stored

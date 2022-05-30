@@ -9,7 +9,6 @@ const MovieDetailCarousel = ({ id }) => {
   const [castImage, setCastImage] = useState([]);
 
   const fetchCastImage = async () => {
-    console.log("id", id);
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
     );
@@ -60,21 +59,6 @@ const MovieDetailCarousel = ({ id }) => {
       items={items}
     />
   );
-  // return (
-  //   <>
-  //     <div>
-  //       {castImage?.map((cast) => (
-  //         <div>
-  //           <img
-  //             src={`https://image.tmdb.org/t/p/w300/${cast.profile_path}`}
-  //             alt={cast.name}
-  //           />
-  //           <h1>{cast.name}</h1>
-  //         </div>
-  //       ))}
-  //     </div>
-  //   </>
-  // );
 };
 
 export default MovieDetailCarousel;
