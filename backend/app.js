@@ -3,6 +3,7 @@ const app = express();
 const connectDB = require("./config/db");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
+const path = require("path");
 const genuuid = require("uuid").v4;
 const rating = require("./routes/ratingReview");
 require("dotenv").config();
@@ -33,9 +34,19 @@ app.use(
 
 app.use("/rating", rating);
 
-app.get("/", (req, res) => {
-  res.send("Home page");
-});
+// serve frontend
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/build")));
+  app.get("*", (req, res) =>
+    res.sendFile(
+      path.resolve(__dirname, "../", "frontend", "build", "index.html")
+    )
+  );
+} else {
+  app.get("/", (req, res) => {
+    res.send("set it to production");
+  });
+}
 
 const port = process.env.PORT;
 
