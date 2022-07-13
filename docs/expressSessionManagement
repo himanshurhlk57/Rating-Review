@@ -12,4 +12,7 @@ sessions has the information about the cookies
 
 userCredntials has emails and passwords
 
-users has informations about the users firstame lastname email whatever you want to store about the user
+users has informations about the users firstame lastname email whatever you want to store about the user 
+
+the session object contain the session id and userId.
+whenever we get any further request we can identify any user by session object and userid.

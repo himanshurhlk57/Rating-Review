@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import MovieDetails from "./Pages/MovieDetails";
 import { MovieProvider } from "../src/context/MovieContext";
-import Login from "./components/Authentication/Login";
-import Signup from "./components/Authentication/Signup";
+import Signup from "./Pages/Signup/Signup";
+import Login from "./Pages/Login/Login";
 
 function App() {
   return (
